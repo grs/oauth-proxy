@@ -1,4 +1,4 @@
-package main
+package oauthproxy
 
 import (
 	"crypto"
@@ -18,7 +18,7 @@ import (
 	"github.com/18F/hmacauth"
 	"github.com/bmizerany/assert"
 
-	"github.com/openshift/oauth-proxy/providers"
+	"github.com/grs/oauth-proxy/providers"
 	"golang.org/x/net/websocket"
 )
 

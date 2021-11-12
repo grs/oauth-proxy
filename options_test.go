@@ -1,4 +1,4 @@
-package main
+package oauthproxy
 
 import (
 	"crypto"
@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/bmizerany/assert"
-	"github.com/openshift/oauth-proxy/providers"
+	"github.com/grs/oauth-proxy/providers"
 )
 
 type testProvider struct {

@@ -1,4 +1,4 @@
-package main
+package oauthproxy
 
 import (
 	"context"
@@ -13,7 +13,7 @@ import (
 
 	oscrypto "github.com/openshift/library-go/pkg/crypto"
 
-	"github.com/openshift/oauth-proxy/util"
+	"github.com/grs/oauth-proxy/util"
 )
 
 type Server struct {

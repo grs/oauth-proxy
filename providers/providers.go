@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/openshift/oauth-proxy/cookie"
+	"github.com/grs/oauth-proxy/cookie"
 )
 
 type Provider interface {

@@ -1,4 +1,4 @@
-package main
+package oauthproxy
 
 import (
 	"flag"
@@ -13,11 +13,15 @@ import (
 
 	"github.com/BurntSushi/toml"
 	"github.com/mreiferson/go-options"
-	"github.com/openshift/oauth-proxy/providers"
-	"github.com/openshift/oauth-proxy/providers/openshift"
+	"github.com/grs/oauth-proxy/providers"
+	"github.com/grs/oauth-proxy/providers/openshift"
 )
 
-func main() {
+func Start(args []string) {
+	go run(args)
+}
+
+func run(args []string) {
 	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
 	flagSet := flag.NewFlagSet("oauth2_proxy", flag.ExitOnError)
 
@@ -103,7 +107,7 @@ func main() {
 	providerOpenShift := openshift.New()
 	providerOpenShift.Bind(flagSet)
 
-	flagSet.Parse(os.Args[1:])
+	flagSet.Parse(args)
 
 	providerOpenShift.SetClientCAFile(clientCA)
 	providerOpenShift.SetReviewCAs(openshiftCAs.Get().([]string))

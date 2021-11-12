@@ -1,4 +1,4 @@
-package main
+package oauthproxy
 
 import (
 	"html/template"
@@ -310,7 +310,7 @@ func getTemplates() *template.Template {
   <footer>
     {{ if eq .Footer "-" }}
     {{ else if eq .Footer ""}}
-      Secured with <a href="https://github.com/openshift/oauth-proxy#oauth2_proxy">OpenShift oauth-proxy</a>
+      Secured with <a href="https://github.com/grs/oauth-proxy#oauth2_proxy">OpenShift oauth-proxy</a>
     {{ else }}
       {{.Footer}}
     {{ end }}

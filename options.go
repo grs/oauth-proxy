@@ -1,4 +1,4 @@
-package main
+package oauthproxy
 
 import (
 	"crypto"
@@ -16,8 +16,8 @@ import (
 
 	oscrypto "github.com/openshift/library-go/pkg/crypto"
 
-	"github.com/openshift/oauth-proxy/providers"
-	"github.com/openshift/oauth-proxy/providers/openshift"
+	"github.com/grs/oauth-proxy/providers"
+	"github.com/grs/oauth-proxy/providers/openshift"
 )
 
 // Configuration Options that can be set by Command Line Flag, or Config File

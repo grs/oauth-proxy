@@ -1,4 +1,4 @@
-package main
+package oauthproxy
 
 import (
 	"crypto/tls"
@@ -22,9 +22,9 @@ import (
 
 	oscrypto "github.com/openshift/library-go/pkg/crypto"
 
-	"github.com/openshift/oauth-proxy/cookie"
-	"github.com/openshift/oauth-proxy/providers"
-	"github.com/openshift/oauth-proxy/util"
+	"github.com/grs/oauth-proxy/cookie"
+	"github.com/grs/oauth-proxy/providers"
+	"github.com/grs/oauth-proxy/util"
 )
 
 const SignatureHeader = "GAP-Signature"

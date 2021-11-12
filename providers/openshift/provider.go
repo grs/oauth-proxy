@@ -22,8 +22,8 @@ import (
 
 	oscrypto "github.com/openshift/library-go/pkg/crypto"
 
-	"github.com/openshift/oauth-proxy/providers"
-	"github.com/openshift/oauth-proxy/util"
+	"github.com/grs/oauth-proxy/providers"
+	"github.com/grs/oauth-proxy/util"
 
 	authenticationv1 "k8s.io/api/authentication/v1"
 	authorizationv1 "k8s.io/api/authorization/v1"
